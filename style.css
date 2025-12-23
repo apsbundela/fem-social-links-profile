@@ -1,0 +1,116 @@
+:root {
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+body {
+    box-sizing: border-box;
+    color: var(--White);
+    background-color: var(--Grey-900);
+    height: 100vh;
+    font-family: "Inter",sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card {
+    padding: 2.5rem;
+    background-color: var(--Grey-800);
+    border-radius: 1rem;
+    min-width: 25rem;
+}
+
+.avatar-wrapper {
+      text-align: center;
+      margin-top: 0.75rem;
+}
+
+.avatar {
+    max-height: 100px;
+    max-width: 100px;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+.avtar-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 1rem 0 0.85rem 0;
+}
+
+.name {
+    font-size: 1.65rem;
+}
+
+.address {
+   font-size: 0.9rem;
+   font-weight: 500;
+   color: var(--Green);
+}
+
+.profession {
+    margin:0.725rem 0 0.55rem;
+    font-size: 0.725rem;
+    font-style: normal;
+}
+
+.action-container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+}
+
+.anchor-action {
+    padding: 1rem 0.55rem;
+    border-radius: 0.55rem;
+    background-color: var(--Grey-700);
+    color: var(--White);
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.5s ease-out;
+}
+
+
+.anchor-action:hover {
+    background-color: var(--Green);
+    color: var(--Grey-800);
+    cursor: pointer;
+}
+
+
+.attribution a {
+    color: var(--Green);
+    text-decoration: none;
+}
+@media (max-width:425px) {
+    .card {
+        min-width: 20rem;
+        padding: 1.5rem;
+    }
+}
